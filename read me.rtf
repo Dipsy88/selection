@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue192;\red42\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c16471\c0\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18660\viewh13440\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Purpose: The included Java program is used primarily for test case selection based on different user requirements (e.g., detect more faults). With this program, users can create test cases, edit them and select them under time budget allocated for testing.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+The program is built with MVC (Model-View-Controller) approach. It is structured into different packages explained below:\
+1. controller\
+This package contains the controller classes that link the model and view classes along with database connection. \
+2. database\
+Database connection information is included here.\
+3. main\
+\'93Main.java\'94 is the main file to execute the program.\
+4. Model\
+5. simula.oclga\
+Algorithms from Simula (that we implemented) are included here.\
+6. view\
+This folder contains classes that shows the GUI of program.\
+\'93TestCaseSelectionPage.java\'94 is the view file used for test case selection.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+For test case selection, user need to connect to database.\
+Edit the file database/DatabaseConnection with the following parameters to suit your needs:\
+\pard\pardeftab720\partightenfactor0
+\cf2 database\cf0 .setUrl(\cf3 "127.0.0.1"\cf0 );  //Set the url of database\
+\cf2 database\cf0 .setPortNumber(\cf3 "5432\'94\cf0 );//Set the port of database\
+\cf2 database\cf0 .setDbName(\cf3 \'93selection\'94\cf0 );//Set the name of database\
+\cf2 database\cf0 .setUserName(\cf3 "postgres\'94\cf0 );//Set the username of database\
+\cf2 database\cf0 .setPassWord(\cf3 "dipesh\'94\cf0 )//Set the password of database\
+\
+Definitions for test selection\
+1. Test execution time: Time that the tester estimates he has to do all the tests before the deliverables.\
+\
+2. Context: Test written for internal purposes only or for external partners. This could be useful for example when working for some particular customer, and we are not interested to test other tests (e.g., other partner tests, internal tests).\
+\
+3. Priority: Importance of the test case with regards to the requirement of the system under test.\
+\
+4. Probability: How likely it is to find the fault by executing the test case? Initially we give one value, and later on calculated dynamically with regards to test failure of the case.\
+\
+5. Consequence: The effect of test case in the system if something goes wrong.\
+\
+6. Efficiency priority: It is the number which computes the priority of test case by test case execution time.\
+\
+7. Efficiency probability: It is the number which computes the probability of test case by test case execution time.\
+\
+8. Efficiency consequence: It is the number which computes the consequence of test case by test case execution time.\
+\
+9. Component under test: System under test represented by the test case.\
+\
+10. Feature: Functionality of system under test we are testing.\
+\
+11. Types of test: Shows what kind of test we are interested in for example, functionality, performance, usability.\
+\
+12. Default configuration: Sets default setting (for all the test selection measures, e.g., test execution time, priority, probability that user need to use often.}
